@@ -97,8 +97,8 @@ function drawApprovalStamp(page, options) {
   const pageWidth = page.getWidth();
   const pageHeight = page.getHeight();
 
-  const stampWidth = 360;
-  const stampHeight = line3 ? 96 : 78;
+  const stampWidth = 300;
+  const stampHeight = line3 ? 78 : 64;
 
   /*
     Account summary area placement:
@@ -124,26 +124,26 @@ function drawApprovalStamp(page, options) {
   });
 
   page.drawText(line1, {
-    x: x + 18,
-    y: y + stampHeight - 36,
-    size: 28,
+    x: x + 14,
+    y: y + stampHeight - 28,
+    size: 22,
     font: italicFont,
     color: green
   });
 
   page.drawText(line2, {
-    x: x + 18,
-    y: y + stampHeight - 62,
-    size: 17,
+    x: x + 14,
+    y: y + stampHeight - 50,
+    size: 14,
     font: italicFont,
     color: green
   });
 
   if (line3) {
     page.drawText(line3, {
-      x: x + 18,
-      y: y + 16,
-      size: 14,
+      x: x + 14,
+      y: y + 10,
+      size: 11,
       font: boldFont,
       color: green
     });
