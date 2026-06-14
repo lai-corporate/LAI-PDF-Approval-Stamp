@@ -107,7 +107,7 @@ function drawApprovalStamp(page, options) {
     - This lands around the speaker fee / deposit / balance area
   */
   const x = (pageWidth - stampWidth) / 2;
-  const y = (pageHeight / 2) - 115;
+  const y = (pageHeight / 2) + 15;
 
   const green = rgb(0.22, 0.43, 0.12);
   const lightGreen = rgb(0.91, 0.96, 0.86);
