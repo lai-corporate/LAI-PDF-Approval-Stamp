@@ -1,5 +1,5 @@
 {
-  "name": "lai-pdf-approval-stamp-worker",
+  "name": "contract-approve-stamp",
   "version": "1.0.0",
   "type": "module",
   "dependencies": {
