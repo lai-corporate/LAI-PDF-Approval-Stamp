@@ -1,0 +1,11 @@
+{
+  "name": "lai-pdf-approval-stamp-worker",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "pdf-lib": "^1.17.1"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
