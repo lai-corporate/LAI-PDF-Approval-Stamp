@@ -53,13 +53,17 @@ export default {
       const line2 = `By ${approvedByName} at ${stampDateText}`;
       const line3 = bookingNumber ? `Booking ${bookingNumber}` : '';
 
-      drawApprovalStamp(page, {
-        line1,
-        line2,
-        line3,
-        boldFont,
-        italicFont
-      });
+      const existingApprovals =
+  Number(body.existingApprovalCount || 0);
+
+drawApprovalStamp(page, {
+  line1,
+  line2,
+  line3,
+  boldFont,
+  italicFont,
+  approvalIndex: existingApprovals
+});
 
       const stampedBytes = await pdfDoc.save({
         useObjectStreams: false
@@ -107,7 +111,12 @@ function drawApprovalStamp(page, options) {
     - This lands around the speaker fee / deposit / balance area
   */
   const x = (pageWidth - stampWidth) / 2;
-  const y = (pageHeight / 2) + 15;
+  const approvalIndex = options.approvalIndex || 0;
+
+const baseY = (pageHeight / 2) + 15;
+const verticalSpacing = 90;
+
+const y = baseY - (approvalIndex * verticalSpacing);
 
   const green = rgb(0.22, 0.43, 0.12);
   const lightGreen = rgb(0.91, 0.96, 0.86);
